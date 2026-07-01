@@ -5,21 +5,21 @@
 class Patchflow < Formula
   desc "Local-first security scanner for code, dependencies, and secrets"
   homepage "https://patchflow.dev"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Patchflow-security/patchflow-cli/releases/download/v0.1.0/patchflow_0.1.0_macos_x86_64.tar.gz"
-      sha256 "b2c1be18408b41c281c5f84e3422b624af86bfbeacfcb83e7706072901159949"
+      url "https://github.com/Patchflow-security/patchflow-cli/releases/download/v0.1.1/patchflow_0.1.1_macos_x86_64.tar.gz"
+      sha256 "d525404eee484fa1056751d06cd0802f2d985c645303b275268bb12b8a640415"
 
       define_method(:install) do
         bin.install "patchflow"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Patchflow-security/patchflow-cli/releases/download/v0.1.0/patchflow_0.1.0_macos_arm64.tar.gz"
-      sha256 "94e376a6750765db6d03bb07a10918648bb4c1450e517711b6dc930d58788f8c"
+      url "https://github.com/Patchflow-security/patchflow-cli/releases/download/v0.1.1/patchflow_0.1.1_macos_arm64.tar.gz"
+      sha256 "1e92470350bb6ae6e77bb2298c758ae7187b8a4ee6a4707aec4cf11fa1798d77"
 
       define_method(:install) do
         bin.install "patchflow"
@@ -29,15 +29,15 @@ class Patchflow < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Patchflow-security/patchflow-cli/releases/download/v0.1.0/patchflow_0.1.0_linux_x86_64.tar.gz"
-      sha256 "43fe2b9444ea5c817b751233f3129de0eb452bf719517e2d382cf5b12672db64"
+      url "https://github.com/Patchflow-security/patchflow-cli/releases/download/v0.1.1/patchflow_0.1.1_linux_x86_64.tar.gz"
+      sha256 "741508e9f9a7e5c6d01e456c0426d517594465848e326b6f0b009c434652e41d"
       define_method(:install) do
         bin.install "patchflow"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Patchflow-security/patchflow-cli/releases/download/v0.1.0/patchflow_0.1.0_linux_arm64.tar.gz"
-      sha256 "a55e66a20cb94e7fca075a32d8a7310ba36673d96227da3d4ccf805b870bd52d"
+      url "https://github.com/Patchflow-security/patchflow-cli/releases/download/v0.1.1/patchflow_0.1.1_linux_arm64.tar.gz"
+      sha256 "18bb81f30470c51a33376f68125d45a2a41ff05fa3c873d3d2436add47b32247"
       define_method(:install) do
         bin.install "patchflow"
       end
