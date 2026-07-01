@@ -11,7 +11,7 @@ class Patchflow < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Patchflow-security/patchflow-cli/releases/download/v0.1.0/patchflow_0.1.0_macos_x86_64.tar.gz"
-      sha256 "e3a96ac7c02ec3bd6159b14321b20d226e1c8261ddf8fbf2204603c50d48d36d"
+      sha256 "b2c1be18408b41c281c5f84e3422b624af86bfbeacfcb83e7706072901159949"
 
       define_method(:install) do
         bin.install "patchflow"
@@ -19,7 +19,7 @@ class Patchflow < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Patchflow-security/patchflow-cli/releases/download/v0.1.0/patchflow_0.1.0_macos_arm64.tar.gz"
-      sha256 "e91209e4157bde371f7412f0ec1d50773281809e1b5bbbc3f8e40e4c5debddae"
+      sha256 "94e376a6750765db6d03bb07a10918648bb4c1450e517711b6dc930d58788f8c"
 
       define_method(:install) do
         bin.install "patchflow"
@@ -30,14 +30,14 @@ class Patchflow < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Patchflow-security/patchflow-cli/releases/download/v0.1.0/patchflow_0.1.0_linux_x86_64.tar.gz"
-      sha256 "cc79bae5abdc02f7a921b7bad0a472439f1e0d02d3807ddb84dc947627a03ff1"
+      sha256 "43fe2b9444ea5c817b751233f3129de0eb452bf719517e2d382cf5b12672db64"
       define_method(:install) do
         bin.install "patchflow"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Patchflow-security/patchflow-cli/releases/download/v0.1.0/patchflow_0.1.0_linux_arm64.tar.gz"
-      sha256 "7c1c371a455fbc9a3ee67b602d8673eb777490a73133d4ca1fe046d4a6c7c8f7"
+      sha256 "a55e66a20cb94e7fca075a32d8a7310ba36673d96227da3d4ccf805b870bd52d"
       define_method(:install) do
         bin.install "patchflow"
       end
